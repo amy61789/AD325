@@ -3,7 +3,7 @@ package com.example.sortexample;
 import java.util.Random;
 
 public class SortExample {
-    void random(int[] randomNumbers){
+    private void random(int[] randomNumbers){
 
         Random r = new Random();
 
@@ -13,7 +13,7 @@ public class SortExample {
         }
     }
 
-    void selectionSort(int[] randomNumbers){
+    private void selectionSort(int[] randomNumbers){
         int n = randomNumbers.length;
         for(int i = 0; i < n -1; i++){
             int min = i;
@@ -30,7 +30,7 @@ public class SortExample {
         }
     }
 
-    void insertionSort(int[] randomNumbers){
+    private void insertionSort(int[] randomNumbers){
         int n = randomNumbers.length;
         for(int i = 1; i < n; i++){
             int key = randomNumbers[i];
@@ -45,7 +45,7 @@ public class SortExample {
         }
     }
 
-    void shellSort(int[] randomNumbers){
+    private void shellSort(int[] randomNumbers){
 
         int n = randomNumbers.length;
         //start with a big gap, then reduce the gap
@@ -63,7 +63,8 @@ public class SortExample {
 
     public static void main(String[] args) {
         System.out.println("Randomly generating 100,000 numbers...");
-        int[] randomNumbers = new int[100000];
+        int[] randomNumbers;
+        randomNumbers = new int[100000];
 
         final long startTime1 = System.currentTimeMillis();
         SortExample shell = new SortExample();
