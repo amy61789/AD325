@@ -66,22 +66,25 @@ public class SortExample {
         int[] randomNumbers;
         randomNumbers = new int[100000];
 
-        final long startTime1 = System.currentTimeMillis();
         SortExample shell = new SortExample();
+        shell.random(randomNumbers);
+        final long startTime1 = System.currentTimeMillis();
         shell.shellSort(randomNumbers);
         final long endTime1 = System.currentTimeMillis();
         System.out.println("Total execution time for Shellsort: " + (endTime1 - startTime1) + " milliseconds");
 
-        final long startTime2 = System.currentTimeMillis();
+
         SortExample insertion = new SortExample();
         insertion.random(randomNumbers);
+        final long startTime2 = System.currentTimeMillis();
         insertion.insertionSort(randomNumbers);
         final long endTime2 = System.currentTimeMillis();
         System.out.println("Total execution time for Insertion Sort: " + (endTime2 - startTime2) + " milliseconds");
 
-        final long startTime3 = System.currentTimeMillis();
+
         SortExample selection = new SortExample();
         selection.random(randomNumbers);
+        final long startTime3 = System.currentTimeMillis();
         selection.selectionSort(randomNumbers);
         final long endTime3 = System.currentTimeMillis();
         System.out.println("Total execution time for Selection Sort: " + (endTime3 - startTime3) + " milliseconds");
